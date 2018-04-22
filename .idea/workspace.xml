@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc4aba94-f240-49d7-9376-d6ab31549006" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/administration_ui/src/main/java/at/refugeescode/administration_ui/Invoice.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/administration_ui/src/main/java/at/refugeescode/administration_ui/AdminController.java" afterPath="$PROJECT_DIR$/administration_ui/src/main/java/at/refugeescode/administration_ui/AdminController.java" />
-      <change beforePath="$PROJECT_DIR$/administration_ui/src/main/resources/templates/home.html" afterPath="$PROJECT_DIR$/administration_ui/src/main/resources/templates/home.html" />
       <change beforePath="$PROJECT_DIR$/administration_ui/src/main/resources/templates/invoices.html" afterPath="$PROJECT_DIR$/administration_ui/src/main/resources/templates/invoices.html" />
     </list>
     <ignored path="$PROJECT_DIR$/accountancy/target/" />
@@ -39,9 +35,11 @@
       <file leaf-file-name="invoices.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/administration_ui/src/main/resources/templates/invoices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="95" lean-forward="false" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
-              <folding />
+            <state relative-caret-position="267">
+              <caret line="14" column="108" lean-forward="false" selection-start-line="14" selection-start-column="108" selection-end-line="14" selection-end-column="108" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +67,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administration_ui/src/main/resources/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="15" column="113" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="113" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -649,16 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administration_ui/src/main/resources/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administration_ui/src/main/java/at/refugeescode/administration_ui/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
@@ -679,11 +667,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/administration_ui/src/main/resources/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="113" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/administration_ui/src/main/resources/templates/invoices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="95" lean-forward="false" selection-start-line="11" selection-start-column="95" selection-end-line="11" selection-end-column="95" />
-          <folding />
+        <state relative-caret-position="267">
+          <caret line="14" column="108" lean-forward="false" selection-start-line="14" selection-start-column="108" selection-end-line="14" selection-end-column="108" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
