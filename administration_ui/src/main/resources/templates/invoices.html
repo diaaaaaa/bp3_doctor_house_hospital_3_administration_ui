@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Invoice</title>
 </head>
 <body>
+<h1>Invoice info</h1>
+<br/><br/>
+<form th:action="@{/invoices}" th:object="${invoice}"  method="get">
+    <h3>Patient Name: </h3> <td th:text="${invoice.patientName}"></td><hr/><hr/><hr/>
+    <h3>Patient Treatment: </h3> <td th:text="${invoice.patientTreatment}"></td><hr/><hr/><hr/>
+    <h3>Time: </h3> <td th:text="${invoice.localDateTime}"></td><hr/><hr/><hr/>
+    <h3>Cost: </h3> <td th:text="${invoice.cost}">$</td><hr/><hr/><hr/>
+</form>
 
 </body>
 </html>
