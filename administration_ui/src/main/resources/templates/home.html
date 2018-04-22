@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <title>Administration</title>
+</head>
+<body>
+<div align="center" style="top: 50%;left: 50%;">
+    <br/><br/>
+    <h1>Patient info</h1>
+    <br/><br/>
+    <form th:action="@{/addPatient}" th:object="${patient}"  method="post">
+        <input th:field="*{name}" placeholder="patient name" name="name" class="form-control form-group col-md-6"/>
+        <input th:field="*{symptom}" placeholder="patient symptoms" name="symptom" class="form-control form-group col-md-6"/>
+        <button type="submit" class="btn btn-info">add</button>
+    </form>
+    <br/>
+    <button type="rest" class="btn btn-info" onClick="clearform();">reset</button>
+</div>
+    <script>
+    function clearform()
+    {
+        document.getElementById("name").value="";
+        document.getElementById("symptom").value="";
+    }
+    </script>
+    <br/>
+
+</body>
+</html>
