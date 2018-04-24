@@ -9,7 +9,7 @@ public class AdminController {
 
     private Invoice invoice;
 
-    @GetMapping("/home")
+    @GetMapping("/")
     String mainPage(){
 
         return "home";
@@ -25,8 +25,9 @@ public class AdminController {
     Patient createPatient(){
         return new Patient();
     }
+
     @ModelAttribute("invoice")
-    Invoice createInvoice(Invoice invoice){
+    Invoice bringInvoice(Invoice invoice){
         RestTemplate restTemplate = new RestTemplate();
         Invoice forObject = restTemplate.getForObject("http://localhost:8084/invoices", Invoice.class);
         invoice.setPatientName(forObject.getPatientName());

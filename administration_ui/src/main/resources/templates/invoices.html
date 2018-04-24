@@ -18,6 +18,9 @@
     <h3>Time: </h3> <td th:text="${invoice.localDateTime}"></td><hr/><hr/><hr/>
     <h3>Cost: </h3> <td th:text="${invoice.cost}"></td>$<hr/><hr/><hr/>
 </form>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
 </div>
 
 </body>
