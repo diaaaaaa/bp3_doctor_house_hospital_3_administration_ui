@@ -23,16 +23,16 @@
         </ul>
     </div>
 </nav>
-<div style="background-image:url(../images/h.jpg); position: relative ; padding:150px;  background-repeat:no-repeat; background-position: center;">
 
-<div class="container">
+
+<div style="background-image:url(../images/h.jpg); position: relative ; padding:150px;  background-repeat:no-repeat; background-position: center;" class="container">
 
     <div class="content" >
         <p th:if="${param.logout}" class="alert text-danger bg-dark">You have been logged out</p>
         <p th:if="${param.error}" class="alert alert-error text-danger">There was an error, please try again</p>
 
         <br/>
-        <h2 class="text-success bg-dark"> Login </h2>
+        <h2 class="text-success bg-dark"> &nbsp;&nbsp; Login </h2>
         <form name="form" th:action="@{/login}" action="/login" method="POST">
             <fieldset>
                 <input type="text" name="username" value="" placeholder="Username" autofocus="autofocus" />
@@ -44,6 +44,6 @@
         </form>
     </div>
 </div>
-</div>
+
 </body>
 </html>

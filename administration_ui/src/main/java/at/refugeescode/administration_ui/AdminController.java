@@ -26,6 +26,7 @@ public class AdminController {
         return new Patient();
     }
 
+
     @ModelAttribute("invoice")
     Invoice bringInvoice(Invoice invoice){
         RestTemplate restTemplate = new RestTemplate();

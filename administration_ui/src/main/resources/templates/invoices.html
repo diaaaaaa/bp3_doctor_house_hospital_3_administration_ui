@@ -25,16 +25,15 @@
     </div>
 </nav>
 <div style="background-image:url(../images/h.jpg); position: relative ; padding:150px;  background-repeat:no-repeat; background-position: center;">
-
 <div align="center" style="top: 50%;left: 50%;">
-<h1 class="text-success">Invoice info</h1>
+<h1 class="text-success bg-dark">Invoice info</h1>
 <hr/>
-<form th:action="@{/invoices}" th:object="${invoice}"  method="get" class="form-control form-group col-md-6">
+
     <h3>Patient Name: </h3> <td th:text="${invoice.patientName}"></td><hr/><hr/><hr/>
     <h3>Patient Treatment: </h3> <td th:text="${invoice.patientTreatment}"></td><hr/><hr/><hr/>
     <h3>Time: </h3> <td th:text="${invoice.localDateTime}"></td><hr/><hr/><hr/>
     <h3>Cost: </h3> <td th:text="${invoice.cost}"></td>$<hr/><hr/><hr/>
-</form>
+
     <form th:action="@{/logout}" method="post">
         <input class="btn btn-info" type="submit" value="Sign Out"/>
     </form>
