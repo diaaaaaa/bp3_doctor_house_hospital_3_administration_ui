@@ -8,10 +8,27 @@
     <title>Invoice</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand text-warning" th:href="@{/}" href="home.html">Dr.House</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link text-success" th:href="@{/}" href="home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success" th:href="@{/invoices}" href="invices.html">Invoice</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div style="background-image:url(../images/h.jpg); position: relative ; padding:150px;  background-repeat:no-repeat; background-position: center;">
+
 <div align="center" style="top: 50%;left: 50%;">
-<h1>Invoice info</h1>
+<h1 class="text-success">Invoice info</h1>
 <hr/>
-<br/><br/>
 <form th:action="@{/invoices}" th:object="${invoice}"  method="get" class="form-control form-group col-md-6">
     <h3>Patient Name: </h3> <td th:text="${invoice.patientName}"></td><hr/><hr/><hr/>
     <h3>Patient Treatment: </h3> <td th:text="${invoice.patientTreatment}"></td><hr/><hr/><hr/>
@@ -19,9 +36,9 @@
     <h3>Cost: </h3> <td th:text="${invoice.cost}"></td>$<hr/><hr/><hr/>
 </form>
     <form th:action="@{/logout}" method="post">
-        <input type="submit" value="Sign Out"/>
+        <input class="btn btn-info" type="submit" value="Sign Out"/>
     </form>
 </div>
-
+</div>
 </body>
 </html>

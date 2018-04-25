@@ -2,32 +2,48 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <!--<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="navbar">
-        <div class="navbar-inner">
-            <a class="brand" th:href="@{/}"> Dr. House App</a>
-            <ul class="nav">
-                <li><a th:href="@{/}" href="home.html"> Add a Patient </a></li>
-                <li><a th:href="@{/invoices}" href="invoices.html"> Invoice </a></li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand text-warning" th:href="@{/}" href="home.html">Dr.House</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link text-success" th:href="@{/}" href="home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success" th:href="@{/invoices}" href="invices.html">Invoice</a>
+            </li>
+        </ul>
     </div>
-    <div class="content">
-        <p th:if="${param.logout}" class="alert">You have been logged out</p>
-        <p th:if="${param.error}" class="alert alert-error">There was an error, please try again</p>
-        <h2>Login with Username and Password</h2>
+</nav>
+<div style="background-image:url(../images/h.jpg); position: relative ; padding:150px;  background-repeat:no-repeat; background-position: center;">
+
+<div class="container">
+
+    <div class="content" >
+        <p th:if="${param.logout}" class="alert text-danger bg-dark">You have been logged out</p>
+        <p th:if="${param.error}" class="alert alert-error text-danger">There was an error, please try again</p>
+
+        <br/>
+        <h2 class="text-success bg-dark"> Login </h2>
         <form name="form" th:action="@{/login}" action="/login" method="POST">
             <fieldset>
                 <input type="text" name="username" value="" placeholder="Username" autofocus="autofocus" />
-                <input type="password" name="password" placeholder="Password" />
+                <br/><br/><input type="password" name="password" placeholder="Password" />
             </fieldset>
+            <br/>
             <input type="submit" id="login" value="Login"
-                   class="btn btn-primary" />
+                   class="btn btn-info" />
         </form>
     </div>
+</div>
 </div>
 </body>
 </html>

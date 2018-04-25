@@ -8,21 +8,39 @@
     <title>Administration</title>
 </head>
 <body>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand text-warning" th:href="@{/}" href="home.html">Dr.House</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link text-success" th:href="@{/}" href="home.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-success" th:href="@{/invoices}" href="invices.html">Invoice</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div style="background-image:url(../images/h.jpg); position: relative ; padding:150px;  background-repeat:no-repeat; background-position: center;">
+<!--<img src="../a.jpg">-->
 <div align="center" style="top: 50%;left: 50%;">
-    <li><a th:href="@{/}" href="home.html"> Main page </a></li>
-    <li><a th:href="@{/invoices}" href="invices.html"> Invoice </a></li>
-    <br/><br/>
-    <h1>Patient info</h1>
-    <br/><br/>
+    <h1 class="text-success bg-dark">Patient info</h1>
+    <br/>
     <form th:action="@{/addPatient}" th:object="${patient}"  method="post">
-        <input th:field="*{name}" placeholder="patient name" name="name" class="form-control form-group col-md-6"/>
-        <input th:field="*{symptom}" placeholder="patient symptoms" name="symptom" class="form-control form-group col-md-6"/>
+        <input style="width:200px;" th:field="*{name}" placeholder="patient name" name="name" class="form-control form-group col-md-6"/>
+        <input style="width:200px;" th:field="*{symptom}" placeholder="patient symptoms" name="symptom" class="form-control form-group col-md-6"/>
         <button type="submit" class="btn btn-info">add</button>
     </form>
     <br/>
     <button type="rest" class="btn btn-info" onClick="clearform();">reset</button>
+
+    <br/>
+
 </div>
+
 
     <script>
     function clearform()
@@ -32,6 +50,6 @@
     }
     </script>
     <br/>
-
+</div>
 </body>
 </html>
